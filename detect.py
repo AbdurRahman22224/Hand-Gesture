@@ -123,7 +123,7 @@ def generate_frames_and_joints():
     frames = 129
     for frame_number in range(0, frames):  # Example: Generate 1000 frames
         joints = [
-            {f"joint": i ,"angle": angles[frame_number][i-1]}
+            {f"joint": i ,"angle": round(angles[frame_number][i-1], 2)}
             for i in range(1, 20)  # Example: 20 joints per frame
         ]
         yield {"frame": frame_number, "joints": joints}
