@@ -1,0 +1,18 @@
+Q-1 : How many degrees of freedom does each joint have?
+Ans : The degrees of freedom of each joint is depend on the type of joints for example the MCP joints 
+      have two degrees of freedom and the other PIP and DIP joints have one degrees of freedom 
+      and degrees of freedom about wrist is three.
+      
+Q-2 : Is there a way to compute the rotation matrices for each joint from their joint angles?
+Ans : We can compute the rotation matrices for each joint through their joint angles which we calculated
+      in the json file and by putting the angles value in the rotation matrix for 1 degree of freedom 
+      [[cos(θ) sin(θ)] , [−sin(θ) cos(θ)]] and if the degree of freedom of joint is two then we have 
+      to calculate rotation matrix individually for each direction x and y if and put the angles value
+      in their formula and then multiply both the matrix to get the final rotation matrix and similarly 
+      if degree of freedom is 3 then we have to calculate for each direction x, y, and z and put the 
+      angles value in their respective formulas and multilply all the three matrices to get the final 
+      roatation matrices.
+
+Q-3 : How do we compute the length of each bone of the hand?
+Ans : We can calculate the lenght of each bone(between two joints) using the euclidean diatance 
+      formula by the coordinates of the joints ((x1-x2)^2 + (y1-y2)^2 + (z1-z2)^2)^0.5
